@@ -1,2 +1,2 @@
 # ObscureUtils
-Obscure's everyday-use scripts for your desktop.
+This project began as a collection of Batch scripts I made to sit on my Windows desktop to be called upon when I needed them. Over time, the list of scripts grew, their capabilities improved, their dependencies changed, and I rewrote how they worked a few times. One especially motivating factor in improving the scripts was when my younger brother requested copies for himself. Until that point, the scripts were not designed to work on any system other than my own.
