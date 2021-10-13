@@ -1,6 +1,6 @@
 @echo off
 yt-dlp -U
-cd %temp%
+pushd %temp%
 mkdir ytd
 cd ytd
 echo. > listing.txt
@@ -33,3 +33,4 @@ for %%u in (*.wav) do (
 )
 cd %temp%
 rmdir /s /q ytd
+popd

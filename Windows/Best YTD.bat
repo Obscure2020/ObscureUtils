@@ -1,6 +1,6 @@
 @echo off
 yt-dlp -U
-cd %temp%
+pushd %temp%
 mkdir ytd
 cd ytd
 echo. > listing.txt
@@ -25,3 +25,4 @@ for /f "tokens=*" %%u in (..\listing.txt) do (
 yt-dlp --rm-cache-dir
 cd %temp%
 rmdir /s /q ytd
+popd
