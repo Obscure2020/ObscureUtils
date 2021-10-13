@@ -11,6 +11,8 @@ Make sure these programs are accessible through your system's `path` variable fo
 - [ffmpeg](http://ffmpeg.org/) (since pre-GitHub)
 
 ## To-Do (Maybe)
-1. First
-1. Second
-1. Third
+1. Windows's CMD has trouble with some text input, most notably with the `&` symbol. I'd like to fix this, possibly by converting my `.bat` scripts to `.ps1` scripts.
+1. Remove the MP3 scripts' dependency on lame. I'm told ffmpeg already uses lame internally for its MP3 encoding, so I just have to figure out how to harness this. I probably shoul have done this from the beginning, but I already had lame on my computer from another project when I wrote the original `.bat` scripts.
+1. Make new versions of the scripts that work on Linux and Mac.
+1. Write installation guides for Windows, Linux, and Mac.
+1. (This is far-fetched, but would be cool:) Make automatic installers for the scripts and their dependencies, and furnish them with some form of automatic updater.
