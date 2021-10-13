@@ -25,7 +25,7 @@ yt-dlp --rm-cache-dir
 mkdir outputs
 cd outputs
 for %%u in (..\*) do (
-    ffmpeg -hide_banner -i "..\%%~nxu" -c:a pcm_s32le "%%~nu".wav
+    ffmpeg -hide_banner -i "..\%%~nxu" -c:a pcm_f32le "%%~nu".wav
 )
 for %%u in (*.wav) do (
     lame -q 0 -b 320 --cbr --replaygain-accurate "%%~nxu"
