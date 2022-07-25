@@ -19,7 +19,7 @@ rmdir /s /q videos
 mkdir videos
 cd videos
 for /f "tokens=*" %%u in (..\listing.txt) do (
-    yt-dlp -N 5 --merge-output-format mkv --format-sort codec --embed-thumbnail --embed-metadata "%%u"
+    yt-dlp -N 4 -S codec -f bv+ba/b -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv --embed-thumbnail --embed-metadata "%%u"
     move .\* "%userprofile%\desktop"
 )
 yt-dlp --rm-cache-dir

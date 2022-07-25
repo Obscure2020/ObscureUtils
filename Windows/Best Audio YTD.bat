@@ -5,7 +5,7 @@ mkdir ytd
 cd ytd
 echo. > listing.txt
 del listing.txt
-echo Best Audio YTD 
+echo Best Audio YTD
 echo ==============================
 echo.
 set counter=1
@@ -19,7 +19,7 @@ rmdir /s /q audios
 mkdir audios
 cd audios
 for /f "tokens=*" %%u in (..\listing.txt) do (
-    yt-dlp -N 5 --format-sort acodec -f "bestaudio/bestaudio*" "%%u"
+    yt-dlp -N 4 -S acodec -f "bestaudio/bestaudio*" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv "%%u"
     move .\* "%userprofile%\desktop"
 )
 yt-dlp --rm-cache-dir
