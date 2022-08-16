@@ -6,13 +6,12 @@ I rewrote my scripts so that they operated in `%temp%` rather than in preexistin
 ## Dependencies
 Make sure these programs are accessible through your system's `path` variable for the scripts to work.
 - [yt-dlp](https://github.com/yt-dlp/yt-dlp) (since pre-Github, replaced [youtube-dl](https://github.com/ytdl-org/youtube-dl))
-- ffplay (since pre-Github, comes with ffmpeg)
-- [lame](https://lame.sourceforge.io/index.php) (since pre-GitHub)
 - [ffmpeg](http://ffmpeg.org/) (since pre-GitHub)
+- [lame](https://lame.sourceforge.io/index.php) (since pre-GitHub)
+- ffplay (since pre-Github, should come with ffmpeg. **Windows only.**)
 
-## To-Do (Maybe)
-1. Write usage guides for each of the scripts.
+## To-Do (in descending order of likelihood)
+1. Make new versions of the scripts that work on Linux and Mac. _**Update:** Work has actually begun on this one!_
 1. Windows's CMD has trouble with some text input, most notably with the `&` symbol. I'd like to fix this, possibly by converting my `.bat` scripts to `.ps1` scripts.
-1. Make new versions of the scripts that work on Linux and Mac.
+1. Write usage guides for each of the scripts.
 1. Write installation guides for Windows, Linux, and Mac.
-1. (This is far-fetched, but would be cool:) Make automatic installers for the scripts and their dependencies, and furnish them with some form of automatic updater.
