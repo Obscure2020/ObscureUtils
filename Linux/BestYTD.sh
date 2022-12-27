@@ -22,7 +22,7 @@ mkdir videos
 cd videos
 for LINE in $(cat "../listing.txt")
 do
-    yt-dlp -N 4 -S codec -f bv+ba/b -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv --embed-thumbnail --embed-metadata "$LINE"
+    yt-dlp -N 4 -S quality,codec -f bv+ba/b -o "%(title).160s [%(id).40s].%(ext)s" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv --embed-thumbnail --embed-metadata "$LINE"
     mv ./* "$DESTINATION"
 done
 yt-dlp --rm-cache-dir
