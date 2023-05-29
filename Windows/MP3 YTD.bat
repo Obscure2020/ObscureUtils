@@ -20,7 +20,7 @@ mkdir audios
 cd audios
 mkdir outputs
 for /f "tokens=*" %%u in (..\listing.txt) do (
-    yt-dlp -N 4 -S quality,acodec -f "bestaudio/bestaudio*" -o "%%(title).160s [%%(id).40s].%%(ext)s" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv "%%u"
+    yt-dlp -N 8 -S quality,acodec -f "bestaudio/bestaudio*" -o "%%(title).160s [%%(id).40s].%%(ext)s" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv "%%u"
     cd outputs
     for %%j in (..\*) do (
         ffmpeg -hide_banner -i "..\%%~nxj" -map_metadata -1 -c:a pcm_f32le "%%~nj".wav

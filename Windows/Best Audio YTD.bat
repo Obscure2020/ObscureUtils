@@ -19,7 +19,7 @@ rmdir /s /q audios
 mkdir audios
 cd audios
 for /f "tokens=*" %%u in (..\listing.txt) do (
-    yt-dlp -N 4 -S quality,acodec -f "bestaudio/bestaudio*" -o "%%(title).160s [%%(id).40s].%%(ext)s" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv "%%u"
+    yt-dlp -N 8 -S quality,acodec -f "bestaudio/bestaudio*" -o "%%(title).160s [%%(id).40s].%%(ext)s" -R 30 --file-access-retries 30 --fragment-retries 30 --merge-output-format mkv "%%u"
     move .\* "%userprofile%\desktop"
 )
 yt-dlp --rm-cache-dir
